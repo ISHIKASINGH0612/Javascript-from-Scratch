@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="javascript">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to create element from console</title>
+</head>
+<body style=" background-color: black; color: white;">
+  
+</body>
+
+<script>
+  let div=document.createElement('div');
+  console.log(div);
+  div.className='main';
+  div.id='tik-tik-toes';
+ 
+  
+  div.style.color='red';
+  div.style.padding='10px';
+  div.style.border='2px solid white';
+
+  
+  //div.innerText='Ishika here! Learning DOM from console';
+  //INNERTEXT WILL ONLY ADD TEXT IN THE DIV
+  //WE CAN DO IN OTHER WAY ALSO ...FIRST CREAET TEXT NODE AND THEN APPEND IT TO DIV
+
+let addtext=document.createTextNode('Ishika here! Learning DOM from console');
+div.appendChild(addtext);
+
+
+   //div.innerHTML='Ishika here! Learning DOM from console';
+
+  // till here we have creaetd the div but it is visible on console only not on the page
+  // to make it visible on page we have to append it to the body or any other element
+  //that is called appending the element with the parent element otherwise it will not be visible on the page
+
+  document.body.appendChild(div);
+
+
+</script>
+</html>

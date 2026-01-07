@@ -1,0 +1,7 @@
+console.log("1"+2)
+console.log(1+"2")
+console.log(33+"2")
+console.log(3+5+6+"9")
+console.log("10"+8+9)
+console.log(+true)
+console.log(-"true")

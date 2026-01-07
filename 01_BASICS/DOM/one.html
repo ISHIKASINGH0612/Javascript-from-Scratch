@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Selectors Practice</title>
+
+  <style>
+    .box {
+      border: 2px solid #333;
+      padding: 10px;
+      margin: 10px 0;
+    }
+
+    .highlight {
+      background-color: lightyellow;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="main-heading">JavaScript Selectors Practice</h1>
+
+  <p id="intro">
+    This page is made to practice <strong>JavaScript DOM selectors</strong>.
+  </p>
+
+  <p class="text">Paragraph One</p>
+  <p class="text">Paragraph Two</p>
+  <p class="text">Paragraph Three</p>
+
+  <div class="box" id="box1">
+    Box 1
+  </div>
+
+  <div class="box" id="box2">
+    Box 2
+  </div>
+
+  <ul id="list">
+    <li class="item">Item 1</li>
+    <li class="item">Item 2</li>
+    <li class="item">Item 3</li>
+  </ul>
+
+  <input type="text" name="username" placeholder="Enter username">
+  <input type="password" name="password" placeholder="Enter password">
+
+  <button id="btn">Click Me</button>
+  
+  <script>
+    // let first=document.getElementById('main-heading')
+    // first.style.color='red'
+
+    let second=document.getElementsByClassName('item')
+    second[0].style.color='pink'
+    second[1].style.color='purple'
+    second[2].style.color='yellow'
+
+    // let third=document.getElementsByTagName('ul')
+    // third[1].style.color='green'
+
+    // let fourth=document.getElementsByTagName('p')
+    // fourth[0].style.color='blue'
+    // fourth[1].style.color='orange'
+
+    let fifth=document.querySelector('#main-heading')
+    fifth.style.color='silver'
+
+    let sixth=document.querySelectorAll('.text')
+    sixth[0].style.backgroundColor='lightgrey'
+
+    let seventh=document.querySelectorAll('p')
+    seventh[0].style.border='2px solid red'
+
+    let eight=document.querySelectorAll('li')
+    eight.style.color='brown'
+
+  </script>
+
+</body>
+</html>

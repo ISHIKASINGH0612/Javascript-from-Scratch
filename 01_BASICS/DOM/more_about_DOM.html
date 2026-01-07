@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>More about DOM</title>
+  <style>
+    body{
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <ul class="languages">
+    <li>javascript</li>
+    <!-- here we have created one node
+    We can create diffrent from script part...there are different ways to do so -->
+  </ul>
+  
+</body>
+
+<script>
+  //adding new elements
+  //FIRST WAYS
+  function addlanguage(langname){
+    let newElement=document.createElement("li");
+    newElement.innerText=langname;
+    let parent=document.querySelector('.languages');
+    parent.appendChild(newElement);
+  }
+
+  addlanguage('Python');
+  addlanguage('C++');
+  let parent=document.querySelector('.languages');
+  console.log(parent);
+
+  //we can replace also
+
+  let newElement=document.createElement("li");
+  newElement.innerText='HTML';  
+  let oldElement=parent.children[0];
+  parent.replaceChild(newElement,oldElement);
+
+  //we can remove also
+  let remElement=parent.children[1];
+  parent.removeChild(remElement);
+  console.log(parent);
+  //Remove kiya to ab har jagah se remove ho gaya...aisa nhi ki pehle wale console me rahega aur dusre me nhi...pass by reference hota hai
+
+
+
+</script>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learnign DOM</title>
+  <style>
+    body {
+  background-color: black;
+  color: white;
+}
+
+  </style>
+</head>
+<body >
+  <div class="parent">
+    //COMMENT TO CHECK NODES
+    //CHECKED
+    <div class="HERO"></div> // EL LINE SE 2 NODES BADHI--- 1 DIV AND 1 TEXT NODE (SPACE)
+    <div class="day">Monday</div>
+    <div class="day">Tuesday</div>
+    <div class="day">Wednesday</div>
+    <div class="day">Thursday</div>
+    <div class="day">Friday</div>
+  </div>
+</body>
+
+<script>
+  let element=document.querySelector('.parent')
+  // console.log(element);
+  // console.log(element.children);
+  // console.log(element.children[0]);
+  // console.log(element.children[2]);
+  // console.log(element.children[4]);
+  // console.log(element.children[4].innerHTML);
+  // console.log(element.children.length);
+
+
+//   for(let i=0;i<element.children.length;i++)
+// {
+//     console.log(element.children[i].innerHTML);
+// }
+
+element.children[0].style.color='red'
+element.children[1].style.color='orange'
+element.children[2].style.color='yellow'
+element.children[3].style.color='green'
+element.children[4].style.color='blue'
+
+// // console.log(element.firstElementChild);
+// // console.log(element.lastElementChild);
+
+// let dayone=document.querySelector('.day');
+// // console.log(dayone.innerHTML);
+// // IN ABOVE PART WE WERE MOVING FROM PARENT TO CHILD BUT WE CAN MOVE FROM CHILD TO PARENT ALSO
+
+// console.log(dayone.parentElement);
+// // YOU CAN GO TO NEXT OBJECT SIBLING ALSO
+
+// console.log(dayone.nextElementSibling);
+// console.log(dayone.nextElementSibling.nextElementSibling);
+
+//selecting child nodes
+
+console.log(element.childNodes);
+// here we are thinkng ki there are only 5 children but actually there are more than 5 children because of text nodes (spaces and line breaks)
+//IN COLSOLE 11 NOEDS ARE THERE
+
+</script>
+</html>

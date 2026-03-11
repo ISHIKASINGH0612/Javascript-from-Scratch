@@ -4,8 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>htnml Events </title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+        #google{
+            color: aliceblue;
+        }
+    </style>
 </head>
-<body style="background-color: #414141; color: aliceblue;">
+<body >
     <h2>Amazing image</h2>
     <div >
         <ul id="images">
@@ -14,7 +23,7 @@
             <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
             <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
             <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
-            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+            <li><a " href="https://google.com" id="google">Google</a></li>
         </ul>
    </div>
 </body>
@@ -50,6 +59,30 @@ document.getElementById('owl').addEventListener('click',function(){
     //when multiple event listeners are added to same element for same event type, they are executed in the order they were added.
     //Hence here first alert is executed followed by second alert.
     //But in screen only one alert is visible at a time. So when first alert is closed by user, second alert is shown.
+    //also learn about attachevent and jquery - on method
+
+
+    ///When an event occurs, JavaScript automatically creates an event object.
+
+    // Event Object = Detailed information about the event
+
+    // It is passed as an argument to the event handler function.
+    //Let us learn about event object with an example
+
+    document.getElementById('owl').addEventListener('click',function(e){
+        console.log(e);
+        console.log(e.target);
+        console.log(e.type);
+        console.log(e.timeStamp);
+        //it will give all the details about the event occured
+    });
+    //more to learn about event object are - type, timeStamp, target, currentTarget, preventDefault(), stopPropagation(), toelement(), beforeelement(), clientX, clientY, screenX, screenY, altKey, ctrlKey, shiftKey, keycode etc
+
+    // poora detail present in chat : https://chatgpt.com/share/69600bad-f194-8001-9486-7e54c68dd485
+    // event bubbling , capturing sab dekhna hai
+
+
+
 });
 
 

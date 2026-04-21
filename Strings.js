@@ -32,6 +32,7 @@ console.log(str6[10]); // Output: J, S, t
 let str7 = "Ishika Singh";
 let slicedStr = str7.slice(0, 6);
 console.log(slicedStr); // Output: Ishika
+//last index is not included in the output
 
 
 //5. template literals are a way to create strings in JavaScript that allow for embedded expressions and multi-line strings. They are defined using backticks (` `) instead of single or double quotes. Template literals can include placeholders for variables or expressions, which are denoted by ${}. For example:

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Element</title>
+  <style>
+    body {
+  background-color: black;
+  color: white;
+}
+  </style>
+</head>
+
+<body >
+  
+</body>
+
+<script>
+// TO CREATE ELEMENT WE USE document.createElement() METHOD
+let element=document.createElement('div');
+console.log(element);
+// NOW THIS ELEMENT IS NOT IN OUR DOM TREE IT IS IN VIRTUAL DOM
+// NOW WE CAN ADD CLASS OR ID OR ANYTHING TO THIS ELEMENT
+element.className='HERO';
+element.id='HERO1';
+element.setAttribute('title','I am a hero');
+element.style.backgroundColor='red';
+element.style.color='white';
+element.innerText='I am a hero';
+console.log(element);
+// NOW THIS ELEMENT IS READY TO BE ADDED IN OUR DOM TREE
+document.body.appendChild(element);
+// NOW THIS ELEMENT IS IN OUR DOM TREE
+</script>
+</html>

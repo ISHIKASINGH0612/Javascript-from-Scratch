@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Padhlebehen</title>
+  <style>
+    body
+    {
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <ul>
+    <li>JavaScript</li>
+  </ul>
+  
+</body>
+
+<script>
+  //we want to add a new list...there are multiple ways to do this...we will do using function
+
+  function addItem(language)
+  {
+    let element=document.createElement('li');
+    element.innerText=language;
+    document.body.children[0].appendChild(element);
+  }
+
+  addItem('C++');
+  addItem('Python');
+  addItem('Java');
+
+  //nOW WE WILL LEARN HOW TO EDIT THE ELEMENT
+  let element=document.querySelectorAll('li');
+  element[0].innerText='JavaScript is a programming language';
+  element[0].style.color='red';
+  element[1].innerText='C++ is a programming language';
+  element[1].style.color='green';
+  element[1].style.backgroundColor='purple';
+
+  //now we will learn how to remove the element
+  element[2].remove();//bas anyhow select karo aur remove() method laga do
+</script>
+</html>

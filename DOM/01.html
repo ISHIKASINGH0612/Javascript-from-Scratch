@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOm lec-1</title>
+  <style>
+    body{
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
+<body >
+
+  <div class="parent" >
+    <!-- to see nodes we can add comment also -->
+    <div class="day">Monday</div>
+    <div class="day">Tuesday</div>
+    <div class="day">Wednesday</div>
+    <div class="day">Thursday</div>
+  </div>
+  
+</body>
+
+<script>
+
+let parent = document.querySelector('.parent');
+// console.log(parent);
+// console.log(parent.children);
+// console.log(parent.children[0]);
+// console.log(parent.children[2]);
+// console.log(parent.children[3]);
+// console.log(parent.children[3].innerHTML);
+// console.log(parent.children.length);
+// console.log(parent.children[0].innerHTML.length );
+
+// for(let i=0;i<parent.children.length;i++)
+// {
+//     console.log(parent.children[i].innerHTML);
+// }
+
+// parent .children[0].style.color='red';
+// parent .children[1].style.color='orange';
+
+// console.log(parent.children[0]);
+// console.log(parent.children[1]);
+
+// console.log(parent.firstElementChild.innerHTML);
+// console.log(parent.secondElementChild);//INVALID
+// console.log(parent.lastElementChild.innerHTML);
+
+let day=document.querySelectorAll('.day');
+// console.log(day[0].innerHTML);
+// console.log(day[1].innerHTML);
+// console.log(day[2].innerHTML);
+// console.log(day[3].innerHTML);
+
+// console.log(day[0].parentElement);
+// console.log(day[0].nextElementSibling.innerHTML);
+
+console.log("Nodes: " , parent.childNodes);//isme 9 lements aa rhe na ki 4 kyunki har enter ko vo ek element coutn kar krta hai to 4 div aur 5 text node total 9 nodes aa rhe hai...line break bhi ek text node hota hai...to isliye 9 nodes aa rhe hai...agar aapko sirf elements chahiye to aap childNodes ki jagah children ka use kr skte hai...children me sirf elements count honge...to children me 4 elements honge...childNodes me 9 nodes honge...ye difference hai childNodes aur children me...
+//agar ma jahan par break hai wajha ek baar aur enter karungi to vo count nhi hoga
+//agar ma koi comment add karu to 11 nodes aa rhe hai...4 div, 5 text node, 2 comment node...to isliye 11 nodes aa rhe hai...to ye difference hai childNodes aur children me...childNodes me har ek cheez count hoti hai...children me sirf elements count hote hai...
+
+
+</script>
+</html>
